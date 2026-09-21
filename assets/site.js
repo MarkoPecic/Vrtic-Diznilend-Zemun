@@ -65,6 +65,7 @@
     });
     postaviMeta(ruta);
     zatvoriLightbox();
+    postaviMeni(false);
     if (skrolujNaVrh) window.scrollTo(0, 0);
   }
 
@@ -145,6 +146,12 @@
     else if (akcija === 'filter-tema'){ filter.tema = cilj.dataset.v; osveziGaleriju(); }
     else if (akcija === 'tab')        { prikaziTab(cilj.dataset.v); }
     else if (akcija === 'print')      { window.print(); }
+    else if (akcija === 'meni')       { postaviMeni($('[data-m="hdr"]').dataset.open !== 'true'); }
+  });
+
+  /* Klik na stavku menija zatvara meni na telefonu */
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('[data-m="nav"] a')) postaviMeni(false);
   });
 
   /* 7. Forma za zakazivanje posete ------------------------------------------

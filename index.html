@@ -183,7 +183,7 @@
 <div style="min-height:100vh;display:flex;flex-direction:column;background:#FFFFFF">
 
 <header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:1px solid #E3E7EE">
-  <div data-m="hdr" style="max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+  <div data-m="hdr" data-open="false" style="max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:24px;flex-wrap:wrap">
     <a href="#/pocetna" style="display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0">
       <span style="display:flex;align-items:center">
         <svg width="26" height="32" viewBox="0 0 40 48" fill="none" aria-hidden="true" style="display:block;flex-shrink:0"><path d="M20 2 L4 18 L20 18 Z" fill="#2B5BD7"></path><path d="M20 2 L36 18 L20 18 Z" fill="#F5B324"></path><path d="M4 18 L20 34 L20 18 Z" fill="#17714F"></path><path d="M36 18 L20 34 L20 18 Z" fill="#F2674A"></path><path d="M20 2 L4 18 L20 34 L36 18 Z" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"></path><path d="M20 2 V34 M4 18 H36" stroke="#FFFFFF" stroke-width="2"></path><path d="M20 34 C25 38 15 41 20 46" stroke="#171A1F" stroke-width="2" stroke-linecap="round"></path></svg>
@@ -193,7 +193,12 @@
         <span data-m="tagline" style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#78829A;margin-top:3px;font-weight:600">Vrtić i jaslice</span>
       </span>
     </a>
-    <nav data-m="nav" style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 2px;font-size:14px;font-weight:500;margin-left:auto">
+    <button type="button" data-m="burger" data-action="meni" aria-label="Meni" aria-expanded="false" aria-controls="glavni-meni" style="display:none;margin-left:auto;width:48px;height:48px;flex-shrink:0;align-items:center;justify-content:center;gap:5px;flex-direction:column;border:1.5px solid #E3E7EE;border-radius:14px;background:#FFFFFF;cursor:pointer;padding:0">
+      <span aria-hidden="true" style="display:block;width:20px;height:2px;border-radius:2px;background:#171A1F"></span>
+      <span aria-hidden="true" style="display:block;width:20px;height:2px;border-radius:2px;background:#171A1F"></span>
+      <span aria-hidden="true" style="display:block;width:20px;height:2px;border-radius:2px;background:#171A1F"></span>
+    </button>
+    <nav id="glavni-meni" data-m="nav" style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 2px;font-size:14px;font-weight:500;margin-left:auto">
       <a href="#/pocetna" style="color:#3A404C;text-decoration:none;padding:8px 10px;border-radius:999px" class="hv1">Početna</a>
       <a href="#/o-nama" style="color:#3A404C;text-decoration:none;padding:8px 10px;border-radius:999px" class="hv2">O nama</a>
       <a href="#/tim" style="color:#3A404C;text-decoration:none;padding:8px 10px;border-radius:999px" class="hv3">Naš tim</a>

@@ -159,20 +159,23 @@ summary::-webkit-details-marker { display: none; }
 }
 
 @media (max-width: 860px) {
-  [data-m="nav"] {
-    flex-wrap: nowrap !important;
-    overflow-x: auto;
-    scrollbar-width: none;
-    margin-left: 0 !important;
+  /* Na telefonu zaglavlje je samo logo + hamburger; meni se otvara ispod. */
+  [data-m="burger"] { display: inline-flex !important; }
+  [data-m="nav"] { display: none !important; }
+  [data-m="hdr"][data-open="true"] [data-m="nav"] {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
     width: 100%;
-    padding: 2px 0;
+    gap: 2px;
+    margin: 6px 0 0 0 !important;
+    padding: 8px 0 4px;
+    border-top: 1px solid #E3E7EE;
   }
-  [data-m="nav"]::-webkit-scrollbar { display: none; }
   [data-m="nav"] a {
-    white-space: nowrap;
-    padding: 9px 12px !important;
+    padding: 12px 14px !important;
     min-height: 44px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
   }
   [data-m="hdr"] { padding: 8px 14px !important; gap: 8px !important; }
