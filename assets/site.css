@@ -1,0 +1,215 @@
+/* ==========================================================================
+   Vrtić Diznilend — osnovni stilovi
+   Raspored i boje pojedinačnih elemenata stoje kao inline style u index.html.
+   Ovde je samo ono što inline ne može: reset, fontovi, hover, responsive,
+   stanja rutera i štampa.
+   ========================================================================== */
+
+/* 1. Reset i tipografija
+   -------------------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #FFFFFF;
+  color: #171A1F;
+  font-family: 'Work Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; }
+
+a { color: #2B5BD7; }
+a:hover { color: #1E48AE; }
+
+summary::-webkit-details-marker { display: none; }
+
+:focus-visible { outline: 3px solid #2B5BD7; outline-offset: 2px; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* 2. Ruter: stranice, tabovi, lightbox
+   -------------------------------------------------------------------------- */
+.page[hidden],
+.tab-panel[hidden],
+#lightbox[hidden],
+#forma-hvala[hidden] { display: none; }
+
+.page { animation: rise .28s ease both; }
+
+/* "Preskočite na sadržaj" — vidljiv tek pri fokusu tastaturom */
+.preskoci:focus { left: 0 !important; }
+
+/* 3. Hover i fokus stanja (generisano iz dizajna)
+   -------------------------------------------------------------------------- */
+.hv1:hover { background:#EEF1F6 !important; color:#171A1F !important; }
+.hv2:hover { background:#EEF1F6 !important; color:#171A1F !important; }
+.hv3:hover { background:#EEF1F6 !important; color:#171A1F !important; }
+.hv4:hover { background:#EEF1F6 !important; color:#171A1F !important; }
+.hv5:hover { background:#EEF1F6 !important; color:#171A1F !important; }
+.hv6:hover { background:#EEF1F6 !important; color:#171A1F !important; }
+.hv7:hover { background:#EEF1F6 !important; color:#171A1F !important; }
+.hv8:hover { background:#EEF1F6 !important; color:#171A1F !important; }
+.hv9:hover { background:#EEF1F6 !important; color:#171A1F !important; }
+.hv10:hover { background:#EEF1F6 !important; color:#171A1F !important; }
+.hv11:hover { background:#1E48AE !important; transform:translateY(-2px) !important; }
+.hv12:hover { background:#17714F !important; }
+.hv13:hover { background:#17714F !important; }
+.hv14:hover { background:#17714F !important; }
+.hv15:hover { background:#fff !important; }
+.hv16:hover { background:#171A1F !important; color:#FFFFFF !important; }
+.hv17:hover { text-decoration:underline !important; }
+.hv18:hover { background:#E0A11C !important; }
+.hv19:hover { text-decoration:underline !important; }
+.hv20:hover { transform:translateY(-4px) !important; }
+.hv21:hover { transform:translateY(-4px) !important; }
+.hv22:hover { transform:translateY(-4px) !important; }
+.hv23:hover { background:#171A1F !important; color:#FFFFFF !important; }
+.hv24:hover { background:#1E48AE !important; border-color:#1E48AE !important; }
+.hv25:hover { background:#1E48AE !important; }
+.hv26:hover { background:#D7DCE5 !important; }
+.hv27:hover { text-decoration:underline !important; }
+.hv28:hover { background:#1E48AE !important; }
+.hv29:hover { text-decoration:underline !important; }
+.hv30:hover { background:#1E48AE !important; }
+.hv31:hover { background:#2E3542 !important; }
+.hv32:hover { background:#2E3542 !important; }
+.hv33:hover { background:#fff !important; }
+.hv34:hover { background:#274F35 !important; }
+.hv35:hover { text-decoration:underline !important; }
+.hv36:hover { background:#1E48AE !important; }
+.hv37:hover { background:#E0A11C !important; }
+.hv38:hover { text-decoration:underline !important; }
+.hv39:hover { background:#1E48AE !important; }
+.hv40:hover { background:#EEF1F6 !important; }
+.hv41:hover { background:#EEF1F6 !important; }
+.hv42:hover { background:#EEF1F6 !important; }
+.hv43:hover { background:#EEF1F6 !important; }
+.hv44:hover { background:#EEF1F6 !important; }
+.hv45:hover { background:#EEF1F6 !important; }
+.hv46:hover { background:#EEF1F6 !important; }
+.hv47:hover { background:#EEF1F6 !important; }
+.hv48:hover { background:#EEF1F6 !important; }
+.hv49:hover { background:#EEF1F6 !important; }
+.hv50:hover { background:#EEF1F6 !important; }
+.hv51:hover { border-color:#2B5BD7 !important; }
+.hv52:hover { border-color:#2B5BD7 !important; }
+.hv53:hover { border-color:#2B5BD7 !important; }
+.hv54:hover { border-color:#2B5BD7 !important; }
+.hv55:hover { border-color:#2B5BD7 !important; }
+.hv56:hover { border-color:#2B5BD7 !important; }
+.hv57:hover { border-color:#2B5BD7 !important; }
+.hv58:hover { border-color:#2B5BD7 !important; }
+.hv59:hover { background:#1E48AE !important; }
+.hv60:hover { transform:translateY(-4px) !important; }
+.hv61:hover { transform:translateY(-4px) !important; }
+.hv62:hover { transform:translateY(-4px) !important; }
+.hv63:hover { background:#fff !important; }
+.hv64:hover { background:#274F35 !important; }
+.hv65:hover { background:#1E48AE !important; }
+.hv66:hover { background:#E0A11C !important; }
+.hv67:hover { background:#2E3542 !important; }
+.hv68:hover { background:#fff !important; }
+.hv69:hover { background:#8E3321 !important; }
+.hv70:hover { background:#1E48AE !important; }
+.hv71:hover { background:#1E48AE !important; }
+.hv72:hover { background:#D7DCE5 !important; }
+.hv73:hover { background:#1E48AE !important; }
+.hv74:hover { background:#D7DCE5 !important; }
+.hv75:hover { background:#1E48AE !important; }
+.hv76:hover { background:#1E48AE !important; }
+.hv77:hover { background:#FFFFFF !important; color:#171A1F !important; }
+.hv78:hover { background:#1E48AE !important; }
+.hv79:hover { background:#1E48AE !important; }
+.hv80:hover { background:#1E48AE !important; }
+.hv81:hover { background:#F5B324 !important; color:#FFFFFF !important; }
+.hv82:hover { background:rgba(255,255,255,0.16) !important; }
+.hv83:hover { background:#F5B324 !important; color:#FFFFFF !important; }
+.hv84:hover { background:rgba(255,255,255,0.16) !important; }
+.hv85:hover { background:#2B5BD7 !important; }
+.hv86:hover { background:#B93E22 !important; }
+.hv87:hover { background:#17714F !important; }
+.hv88:hover { color:#FFFFFF !important; }
+.hv89:hover { color:#FFFFFF !important; }
+.hv90:hover { color:#FFFFFF !important; }
+.hv91:hover { color:#FFFFFF !important; }
+.hv92:hover { color:#FFFFFF !important; }
+.hv93:hover { color:#FFFFFF !important; }
+.hv94:hover { color:#FFFFFF !important; }
+.hv95:hover { color:#FFFFFF !important; }
+.hv96:hover { color:#FFFFFF !important; }
+.hv97:hover { color:#FFFFFF !important; }
+.hv98:hover { color:#FFFFFF !important; }
+.hv99:hover { color:#FFFFFF !important; }
+.hv100:hover { color:#FFFFFF !important; }
+.hv101:hover { color:#FFFFFF !important; }
+.hv102:hover { color:#FFFFFF !important; }
+.hv103:hover { color:#FFFFFF !important; }
+.hv104:hover { background:#1E48AE !important; }
+
+/* 4. Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 980px) {
+  [data-m="fgrid"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+@media (max-width: 860px) {
+  [data-m="nav"] {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-left: 0 !important;
+    width: 100%;
+    padding: 2px 0;
+  }
+  [data-m="nav"]::-webkit-scrollbar { display: none; }
+  [data-m="nav"] a {
+    white-space: nowrap;
+    padding: 9px 12px !important;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  [data-m="hdr"] { padding: 8px 14px !important; gap: 8px !important; }
+  [data-m="tagline"] { display: none !important; }
+}
+
+@media (max-width: 760px) {
+  [data-m="deco"] { display: none !important; }
+  [data-m="grid2"] { grid-template-columns: 1fr !important; }
+  [data-m="hero"] { min-height: min(84vh, 620px) !important; }
+  [data-m="sticker"] {
+    top: auto !important;
+    bottom: 66px !important;
+    right: 14px !important;
+    width: 108px !important;
+    height: 108px !important;
+    padding: 10px !important;
+  }
+  [data-m="pad"] { padding: 22px !important; }
+  [data-m="chip"] { min-height: 44px; display: inline-flex; align-items: center; }
+}
+
+@media (max-width: 560px) {
+  [data-m="fgrid"] { grid-template-columns: 1fr !important; }
+}
+
+/* 5. Štampa (spisak za upis, jelovnik)
+   -------------------------------------------------------------------------- */
+@media print {
+  header, footer, #lightbox, [data-action="print"], a[href^="tel:"][style*="fixed"] { display: none !important; }
+  .page { animation: none; }
+  body { background: #fff; }
+}
+
+/* 6. Smanjena animacija za korisnike koji je ne žele
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .page { animation: none; }
+}
