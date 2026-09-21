@@ -164,13 +164,22 @@ summary::-webkit-details-marker { display: none; }
   [data-m="nav"] { display: none !important; }
   [data-m="hdr"][data-open="true"] [data-m="nav"] {
     display: flex !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 60;
     flex-direction: column;
     align-items: stretch;
     width: 100%;
     gap: 2px;
-    margin: 6px 0 0 0 !important;
-    padding: 8px 0 4px;
+    margin: 0 !important;
+    padding: 8px 14px 14px;
+    background: #FFFFFF;
     border-top: 1px solid #E3E7EE;
+    box-shadow: 0 18px 40px rgba(10, 14, 22, 0.16);
+    max-height: calc(100vh - 100%);
+    overflow-y: auto;
   }
   [data-m="nav"] a {
     padding: 12px 14px !important;
@@ -178,7 +187,7 @@ summary::-webkit-details-marker { display: none; }
     display: flex;
     align-items: center;
   }
-  [data-m="hdr"] { padding: 8px 14px !important; gap: 8px !important; }
+  [data-m="hdr"] { padding: 8px 14px !important; gap: 8px !important; position: relative; }
   [data-m="tagline"] { display: none !important; }
 }
 

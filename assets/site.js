@@ -124,6 +124,15 @@
     });
   }
 
+  /* 4b. Mobilni meni --------------------------------------------------------- */
+  function postaviMeni(otvoren) {
+    var hdr = $('[data-m="hdr"]');
+    var dugme = $('[data-m="burger"]');
+    if (!hdr) return;
+    hdr.dataset.open = otvoren ? 'true' : 'false';
+    if (dugme) dugme.setAttribute('aria-expanded', otvoren ? 'true' : 'false');
+  }
+
   /* 5. Recenzije: slajder --------------------------------------------------- */
   function pomeriRecenzije(smer) {
     var traka = $('#recenzije-traka');
